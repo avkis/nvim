@@ -21,9 +21,9 @@ MrJakob's repository [dotfiles](https://github.com/jakobwesthoff/dotfiles) repos
 - [X] which-key
 - [X] fzflua
 - [X] project.nvim
-- [ ] nvim-lspconfig 
-- [ ] conform.nvim
+- [X] lsp 
+- [X] Mason 
+- [X] dressing.nvim 
+- [X] conform.nvim
 - [ ] blink-cmp
-- [ ] snacks.indent
-- [ ] mini.nvim
 
