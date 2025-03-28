@@ -25,5 +25,6 @@ MrJakob's repository [dotfiles](https://github.com/jakobwesthoff/dotfiles) repos
 - [X] Mason 
 - [X] dressing.nvim 
 - [X] conform.nvim
-- [ ] blink-cmp
+- [X] blink-cmp
+
 
