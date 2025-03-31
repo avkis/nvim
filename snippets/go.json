@@ -1,0 +1,32 @@
+{
+	"Err to console": {
+		"prefix": "econ",
+		"body": [
+			"if ${1:err} != nil {",
+			"fmt.Printf(\"${2:error}: %s\", err)",
+			"return$0",
+			"}"
+		],
+		"description": "Print error to console"
+	},
+	"Err to log": {
+		"prefix": "elog",
+		"body": [
+			"if ${1:err} != nil {",
+			"log.Printf(\"${2:error}: %s\", err)",
+			"return$0",
+			"}"
+		],
+		"description": "Put error to log"
+	},
+	"Err resoponse": {
+		"prefix": "eres",
+		"body": [
+			"if ${1:err} != nil {",
+			"http.Error(w, \"${2:Failed to read request body}\", http.${0:StatusBadRequest})",
+			"return",
+			"}"
+		],
+		"description": "Send error as http response"
+	}
+}

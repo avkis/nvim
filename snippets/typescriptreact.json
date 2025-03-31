@@ -1,0 +1,71 @@
+{
+	"Create component": {
+		"prefix": [
+			"rfc"
+		],
+		"body": [
+			"\"use client\"",
+			"",
+			"import { ReactNode } from 'react'",
+			"",
+			"interface ${1:Componentt}Props {",
+			"children: ReactNode;",
+			"}",
+			"",
+			"export const $1 = ({",
+			"children,",
+			"}: $1Props) => {",
+			"",
+			"return (",
+			"<div className=\"$0\">",
+			"{children}",
+			"</div>",
+			")",
+			"}"
+		],
+		"description": "Create a react functional component with interface"
+	},
+	"NextJS Layout": {
+		"prefix": [
+			"nlt"
+		],
+		"body": [
+			"\"use client\"",
+			"",
+			"import { ReactNode } from 'react'",
+			"",
+			"interface ${1:Layout}Props {",
+			"children: ReactNode;",
+			"}",
+			"",
+			"const $1 = ({",
+			"children,",
+			"}: $1Props) => {",
+			"",
+			"return (",
+			"<div className=\"$0\">",
+			"{children}",
+			"</div>",
+			")",
+			"}",
+			"export default $1"
+		],
+		"description": "Create a NextJS layout with default export"
+	},
+	"Create NextJS Page": {
+		"prefix": [
+			"npg"
+		],
+		"body": [
+			"const ${1:Page} = () => {",
+			"return (",
+			"<div className=\"${2:flex}\">",
+			"$0",
+			"</div>",
+			")",
+			"}",
+			"export default $1"
+		],
+		"description": "Create a Next routing Page"
+	}
+}
