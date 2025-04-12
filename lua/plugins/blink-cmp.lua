@@ -3,7 +3,7 @@ return {
 	-- optional: provides snippets for the snippet source
 	dependencies = {
 		"moyiz/blink-emoji.nvim",
-		"rafamadriz/friendly-snippets"
+		"rafamadriz/friendly-snippets",
 	},
 
 	-- use a release tag to download pre-built binaries
@@ -48,21 +48,21 @@ return {
 		sources = {
 			default = { "lsp", "path", "snippets", "buffer", "emoji" },
 			providers = {
-        emoji = {
-          module = "blink-emoji",
-          name = "Emoji",
-          score_offset = 15, -- Tune by preference
-          opts = { insert = true }, -- Insert emoji (default) or complete its name
-          should_show_items = function()
-            return vim.tbl_contains(
-              -- Enable emoji completion only for git commits and markdown.
-              -- By default, enabled for all file-types.
-              { "gitcommit", "markdown" },
-              vim.o.filetype
-            )
-          end,
-        }
-      }
+				emoji = {
+					module = "blink-emoji",
+					name = "Emoji",
+					score_offset = 15, -- Tune by preference
+					opts = { insert = true }, -- Insert emoji (default) or complete its name
+					should_show_items = function()
+						return vim.tbl_contains(
+							-- Enable emoji completion only for git commits and markdown.
+							-- By default, enabled for all file-types.
+							{ "gitcommit", "markdown" },
+							vim.o.filetype
+						)
+					end,
+				},
+			},
 		},
 
 		-- (Default) Rust fuzzy matcher for typo resistance and significantly better performance

@@ -1,2 +1,14 @@
 {
+	"Create Arrow Function": {
+		"prefix": [
+			"arf"
+		],
+		"body": [
+			"const ${1:name} = () => {",
+			"\t$0",
+			"\treturn ${2:null}",
+			"}"
+		],
+		"description": "Create an Arror Function"
+	}
 }

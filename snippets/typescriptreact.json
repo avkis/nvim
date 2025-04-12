@@ -4,24 +4,23 @@
 			"rfc"
 		],
 		"body": [
-			"\"use client\"",
+			"'use client'",
 			"",
-			"import { ReactNode } from 'react'",
+			"import React from 'react'",
 			"",
-			"interface ${1:Componentt}Props {",
-			"children: ReactNode;",
+			"export interface ${1:Component}Props {",
+			"\t${2:name}?: string",
 			"}",
 			"",
-			"export const $1 = ({",
-			"children,",
-			"}: $1Props) => {",
-			"",
-			"return (",
-			"<div className=\"$0\">",
-			"{children}",
-			"</div>",
-			")",
-			"}"
+			"const $1 = (props: $1Props) => {",
+			"\tconst { ${2:name} } = props",
+			"\treturn (",
+			"\t\t<div className=\"$0\">",
+			"\t\t\t${1:Component} { ${2:name} }",
+			"\t\t</div>",
+			"\t)",
+			"}",
+			"export default $1"
 		],
 		"description": "Create a react functional component with interface"
 	},
@@ -30,23 +29,23 @@
 			"nlt"
 		],
 		"body": [
-			"\"use client\"",
+			"'use client'",
 			"",
 			"import { ReactNode } from 'react'",
 			"",
 			"interface ${1:Layout}Props {",
-			"children: ReactNode;",
+			"\tchildren: ReactNode;",
 			"}",
 			"",
 			"const $1 = ({",
-			"children,",
+			"\tchildren,",
 			"}: $1Props) => {",
 			"",
-			"return (",
-			"<div className=\"$0\">",
-			"{children}",
-			"</div>",
-			")",
+			"\treturn (",
+			"\t\t<div className=\"$0\">",
+			"\t\t\t{children}",
+			"\t\t</div>",
+			"\t)",
 			"}",
 			"export default $1"
 		],
@@ -58,14 +57,26 @@
 		],
 		"body": [
 			"const ${1:Page} = () => {",
-			"return (",
-			"<div className=\"${2:flex}\">",
-			"$0",
-			"</div>",
-			")",
+			"\treturn (",
+			"\t\t<div className=\"${2:flex}\">",
+			"\t\t\t$0",
+			"\t\t</div>",
+			"\t)",
 			"}",
 			"export default $1"
 		],
 		"description": "Create a Next routing Page"
+	},
+	"Create Arrow Function": {
+		"prefix": [
+			"arf"
+		],
+		"body": [
+			"const ${1:name} = () => {",
+			"\t$0",
+			"\treturn ${2:null}",
+			"}"
+		],
+		"description": "Create an Arror Function"
 	}
 }
